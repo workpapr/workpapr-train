@@ -1,0 +1,37 @@
+{
+  "name": "@workpapr/train",
+  "version": "0.1.0",
+  "description": "Training framework for Workpapr — trace recording, MLX fine-tuning, SFT/DPO data conversion",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/types.js",
+  "types": "./dist/types.d.ts",
+  "exports": {
+    "./types": "./dist/types.js",
+    "./trace": "./dist/trace/index.js",
+    "./mlx/trainer": "./dist/mlx/trainer.js"
+  },
+  "files": [
+    "dist",
+    "scripts"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/workpapr/workpapr-train"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@workpapr/core": "file:../workpapr"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  }
+}
